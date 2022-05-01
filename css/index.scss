@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+@import 'reset';
+@import 'variable';
+@import 'mixin';
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+main.mainContainer {
+	width: 100vw;
+	height: 100vh;
+	@include flexCol();
+	transition: all 300ms;
+	h1.h1Title {
+		width: 50vw;
+		font-size: 4.5vw;
+	}
+	.divTopContainer {
+		width: 50vw;
+		height: 5vw;
+		margin-top: 1vw;
+		padding: 0 2vw;
+		border-top-left-radius: 1.2vw;
+		border-top-right-radius: 1.2vw;
+		@include flexRow();
+		justify-content: space-between;
+		background-color: $subColor;
+		box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw $lightGray;
+		i.iPenIcon {
+			font-size: 2vw;
+		}
+		input.inputTitle {
+			width: 70%;
+			height: 2.5vw;
+			background-color: #fff;
+			font-size: 1.8vw;
+		}
+		button.buttonClick {
+			width: 15%;
+			height: 100%;
+			font-size: 2vw;
+			transition: all 300ms;
+		}
+		button.buttonClick:hover {
+			transform: scale(1.2);
+			animation: blink 500ms alternate infinite;
+		}
+		@keyframes blink {
+			0% {
+				color: $white;
+			}
+
+			100% {
+				color: $black;
+			}
+		}
+	}
+	.divBottomContainer {
+		width: 50vw;
+		height: 30vw;
+		overflow-x: auto;
+		background-color: $mainColor;
+		box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw $lightGray;
+	}
+	.divBottomContainer::-webkit-scrollbar {
+		width: 0.7vw;
+		border-radius: 1vw;
+	}
+	.divBottomContainer::-webkit-scrollbar-thumb {
+		background-color: $subColor;
+		border: 0.15vw solid $white;
+		border-radius: 1vw;
+	}
+	.divBottomContainer::-webkit-scrollbar-track {
+		background-color: $mainColor;
+		border-radius: 1vw;
+	}
+	ul.ulContainer {
+		height: 12%;
+		@include flexRow();
+		justify-content: space-around;
+		li {
+			height: 80%;
+			@include flexCol();
+		}
+		i.iPenIcon {
+			padding-right: 1vw;
+		}
+		li.liTitle {
+			width: 35%;
+			@include flexRow();
+			font-size: 1.8vw;
+		}
+		li.liCheckBoxContainer {
+			input.inputCheckBox {
+				width: 1.5vw;
+				height: 1.5vw;
+				cursor: pointer;
+			}
+		}
+		li.liDelete {
+			width: 10%;
+			font-size: 1.5vw;
+			cursor: pointer;
+		}
+		li.liStar {
+			width: 25%;
+			font-size: 1.5vw;
+		}
+		button {
+			width: 5%;
+			height: 80%;
+			@include flexCol();
+			font-size: 2vw;
+		}
+	}
+	ul.ulContainer:nth-child(2n) {
+		background-color: $subColor;
+	}
+	button.buttonResetContainer {
+		width: 50vw;
+		@include flexRow();
+		padding: 0.5vw 0;
+		margin: 0 auto;
+		border-bottom-left-radius: 1.2vw;
+		border-bottom-right-radius: 1.2vw;
+		transition: background-color 300ms;
+		background-color: #eee;
+		align-self: flex-end;
+		text-align: center;
+		font-size: 2vw;
+		box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw $lightGray;
+		i.iTrashIcon {
+			transition: all 300ms;
+		}
+	}
+	button.buttonResetContainer:hover {
+		background-color: #ccc;
+	}
+
+	button.buttonResetContainer:hover i.iTrashIcon {
+		transform: scale(1.2);
+	}
+	button.buttonResetContainer:active i.iTrashIcon {
+		transform: scale(1);
+	}
+}

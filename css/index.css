@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Nanum Pen Script', cursive;
+  text-align: center;
+  list-style: none;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+main.mainContainer {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+main.mainContainer h1.h1Title {
+  width: 50vw;
+  font-size: 4.5vw;
+}
+
+main.mainContainer .divTopContainer {
+  width: 50vw;
+  height: 5vw;
+  margin-top: 1vw;
+  padding: 0 2vw;
+  border-top-left-radius: 1.2vw;
+  border-top-right-radius: 1.2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #f6e74d;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+          box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+}
+
+main.mainContainer .divTopContainer i.iPenIcon {
+  font-size: 2vw;
+}
+
+main.mainContainer .divTopContainer input.inputTitle {
+  width: 70%;
+  height: 2.5vw;
+  background-color: #fff;
+  font-size: 1.8vw;
+}
+
+main.mainContainer .divTopContainer button.buttonClick {
+  width: 15%;
+  height: 100%;
+  font-size: 2vw;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+main.mainContainer .divTopContainer button.buttonClick:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: blink 500ms alternate infinite;
+          animation: blink 500ms alternate infinite;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    color: #fafafa;
+  }
+  100% {
+    color: #0a0a0a;
+  }
+}
+
+@keyframes blink {
+  0% {
+    color: #fafafa;
+  }
+  100% {
+    color: #0a0a0a;
+  }
+}
+
+main.mainContainer .divBottomContainer {
+  width: 50vw;
+  height: 30vw;
+  overflow-x: auto;
+  background-color: #f7f2b2;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+          box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+}
+
+main.mainContainer .divBottomContainer::-webkit-scrollbar {
+  width: 0.7vw;
+  border-radius: 1vw;
+}
+
+main.mainContainer .divBottomContainer::-webkit-scrollbar-thumb {
+  background-color: #f6e74d;
+  border: 0.15vw solid #fafafa;
+  border-radius: 1vw;
+}
+
+main.mainContainer .divBottomContainer::-webkit-scrollbar-track {
+  background-color: #f7f2b2;
+  border-radius: 1vw;
+}
+
+main.mainContainer ul.ulContainer {
+  height: 12%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main.mainContainer ul.ulContainer li {
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main.mainContainer ul.ulContainer i.iPenIcon {
+  padding-right: 1vw;
+}
+
+main.mainContainer ul.ulContainer li.liTitle {
+  width: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8vw;
+}
+
+main.mainContainer ul.ulContainer li.liCheckBoxContainer input.inputCheckBox {
+  width: 1.5vw;
+  height: 1.5vw;
+  cursor: pointer;
+}
+
+main.mainContainer ul.ulContainer li.liDelete {
+  width: 10%;
+  font-size: 1.5vw;
+  cursor: pointer;
+}
+
+main.mainContainer ul.ulContainer li.liStar {
+  width: 25%;
+  font-size: 1.5vw;
+}
+
+main.mainContainer ul.ulContainer button {
+  width: 5%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2vw;
+}
+
+main.mainContainer ul.ulContainer:nth-child(2n) {
+  background-color: #f6e74d;
+}
+
+main.mainContainer button.buttonResetContainer {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5vw 0;
+  margin: 0 auto;
+  border-bottom-left-radius: 1.2vw;
+  border-bottom-right-radius: 1.2vw;
+  -webkit-transition: background-color 300ms;
+  transition: background-color 300ms;
+  background-color: #eee;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-align: center;
+  font-size: 2vw;
+  -webkit-box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+          box-shadow: 0.3vw 0.3vw 0.5vw 0.2vw #bbbbbb;
+}
+
+main.mainContainer button.buttonResetContainer i.iTrashIcon {
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+main.mainContainer button.buttonResetContainer:hover {
+  background-color: #ccc;
+}
+
+main.mainContainer button.buttonResetContainer:hover i.iTrashIcon {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+main.mainContainer button.buttonResetContainer:active i.iTrashIcon {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=index.css.map */
